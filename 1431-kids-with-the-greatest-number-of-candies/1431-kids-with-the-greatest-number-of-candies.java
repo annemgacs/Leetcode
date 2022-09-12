@@ -1,38 +1,25 @@
 class Solution {
     public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
         List<Boolean> Ans=new ArrayList<Boolean>();
-        /*int[] extra=new int[candies.length];
-        int[] duplicate= new int[candies.length];
-        duplicate=candies;
-        Arrays.sort(duplicate);
         
+        int[] duplicate= new int[candies.length];
+        duplicate= candies.clone();
+        
+        Arrays.sort(duplicate);
+        System.out.println(candies[0]);
         for(int i=0; i<candies.length;i++)
         {
-            extra[i]=candies[i+3];
-            if(extra[i]<duplicate[candies.length-1])
+            
+            
+            if(candies[i]+extraCandies>=duplicate[candies.length-1])
             {
-                Ans.add("false");
+                Ans.add(true);
             }
             else
             {
-                Ans.add("true");
+                Ans.add(false);
             }
             
-        }*/
-        int max=-1;
-        for(int i=0;i<candies.length;i++)
-        {
-            if(candies[i]>=max)
-            {
-                max=candies[i];
-            }
-        }
-        for(int i=0;i<candies.length;i++)
-        {
-            if(candies[i]+extraCandies >= max)
-                Ans.add(true);
-            else
-                Ans.add(false);
         }
         return Ans;
         
