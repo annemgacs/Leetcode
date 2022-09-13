@@ -15,10 +15,10 @@ class Solution {
             {
                 str=str+"al";
             }
-            else
+            /*else
             {
                 str=str;
-            }
+            }*/
         }
         return str;
         
