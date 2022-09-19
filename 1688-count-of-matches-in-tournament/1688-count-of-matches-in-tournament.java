@@ -3,9 +3,9 @@ class Solution {
         int total=0;
         while(n>1)
         {
-            int x=n;
+            total=total+n-n/2;
             n=n/2;
-            total=total+x-n;
+            
         }
         return total;
         
